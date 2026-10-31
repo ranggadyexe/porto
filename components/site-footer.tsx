@@ -14,7 +14,6 @@ export function SiteFooter({ year }: { year: number }) {
         <p>
           © {year} Rangga Dewa Yudhistira. {t.footer.rights}
         </p>
-        <p className="font-mono text-xs">{t.footer.built}</p>
         <div className="flex items-center gap-4">
           <a
             href={profile.github}

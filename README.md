@@ -36,6 +36,18 @@ public/data/  # data precompute demo AIS
 docs/         # PRD dan catatan produk
 ```
 
+## Contact form
+
+Form kontak memakai Route Handler `/api/contact` dan Resend. Untuk mengaktifkannya di Vercel, set:
+
+```bash
+RESEND_API_KEY=re_...
+CONTACT_TO_EMAIL=ranggadewa853@gmail.com
+RESEND_FROM_EMAIL="Portfolio <onboarding@resend.dev>"
+```
+
+`RESEND_FROM_EMAIL` bisa memakai `onboarding@resend.dev` untuk pengujian (kirim ke email pemilik akun Resend). Setelah domain diverifikasi, ganti dengan alamat domain sendiri. Tanpa `RESEND_API_KEY`, form mengembalikan `503` dan situs tetap berjalan.
+
 ## Deployment
 
-Ditujukan untuk Vercel sebagai situs statis. Tidak ada backend, database, atau environment variable yang dibutuhkan untuk demo.
+Ditujukan untuk Vercel. Demo berjalan statis; hanya form kontak yang memakai serverless route dan environment variable di atas.

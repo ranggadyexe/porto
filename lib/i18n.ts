@@ -8,7 +8,17 @@ const id = {
     projects: "Project",
     labs: "Lab",
     about: "Tentang",
+    journey: "Perjalanan",
     contact: "Kontak",
+  },
+  journeyPage: {
+    title: "Perjalanan Saya",
+    description:
+      "Pendidikan, riset, magang, sertifikasi, dan pencapaian yang membentuk arah karier saya.",
+    back: "Kembali ke tentang",
+    emptyTitle: "Timeline sedang disusun",
+    emptyBody:
+      "Bagian ini akan diisi dengan pengalaman, sertifikat, dan pencapaian.",
   },
   actions: {
     viewGithub: "Lihat GitHub",
@@ -142,13 +152,13 @@ const id = {
     labs: "Lab",
     contact: "Kontak",
     focus: "Fokus",
-    journey: "Jejak project",
+    journey: "Project Pilihan",
   },
   about: {
-    title: "Dari model ML ke pipeline rilis.",
+    title: "Dari model ML ke rilis yang bisa diulang.",
   },
   skills: {
-    title: "Alat yang saya pakai sehari-hari.",
+    title: "Alat yang saya pelajari lewat project.",
   },
   projects: {
     title: "Bukti kerja, bukan sekadar klaim.",
@@ -162,13 +172,34 @@ const id = {
   },
   contact: {
     title: "Mari bangun sistem yang bisa diandalkan.",
-    body: "Terbuka untuk posisi DevOps Engineer, baik full-time maupun kontrak. Saya bisa dihubungi lewat email, LinkedIn, atau GitHub.",
+    body: "Terbuka untuk posisi DevOps Engineer, baik full-time maupun kontrak. Kirim pesan lewat form atau hubungi langsung.",
+    form: {
+      name: "Nama",
+      namePlaceholder: "Nama kamu",
+      email: "Email",
+      emailPlaceholder: "email@contoh.com",
+      message: "Pesan",
+      messagePlaceholder:
+        "Ceritakan peran, project, atau hal yang ingin didiskusikan.",
+      submit: "Kirim pesan",
+      sending: "Mengirim...",
+      success: "Pesan terkirim. Terima kasih!",
+      error: "Pesan gagal dikirim. Coba lagi atau email langsung.",
+      privacy: "Pesan dikirim ke email saya dan tidak disimpan di situs ini.",
+    },
+    openForm: "Kirim pesan",
+  },
+  contactPage: {
+    title: "Kirim pesan",
+    description:
+      "Ceritakan peran, project, atau peluang yang ingin didiskusikan. Saya akan membalas lewat email.",
+    back: "Kembali ke kontak",
   },
   hero: {
     status: "Terbuka untuk peluang DevOps",
     role: "DevOps Engineer",
     tagline:
-      "Saya membangun dan mengoperasikan pipeline rilis yang andal — dari Docker dan CI/CD sampai observability serta keamanan supply chain.",
+      "Lulusan Informatika yang fokus pada Linux, Docker, dan CI/CD. Saya mengubah project menjadi rilis yang bisa diulang dan mudah dirawat.",
     location: "Cibubur, Indonesia",
   },
   theme: {
@@ -178,7 +209,6 @@ const id = {
     label: "Ganti bahasa",
   },
   footer: {
-    built: "Dibangun dengan Next.js · Dideploy di Vercel",
     rights: "Semua hak dilindungi.",
   },
 };
@@ -191,7 +221,17 @@ const en: Dict = {
     projects: "Projects",
     labs: "Lab",
     about: "About",
+    journey: "Journey",
     contact: "Contact",
+  },
+  journeyPage: {
+    title: "My Journey",
+    description:
+      "Education, research, internships, certifications, and achievements that shaped my career direction.",
+    back: "Back to about",
+    emptyTitle: "Timeline in progress",
+    emptyBody:
+      "This section will be filled with experiences, certifications, and achievements.",
   },
   actions: {
     viewGithub: "View GitHub",
@@ -324,13 +364,13 @@ const en: Dict = {
     labs: "Lab",
     contact: "Contact",
     focus: "Focus",
-    journey: "Project trail",
+    journey: "Selected Projects",
   },
   about: {
-    title: "From ML models to release pipelines.",
+    title: "From ML models to repeatable releases.",
   },
   skills: {
-    title: "Tools I use day to day.",
+    title: "Tools I've learned through projects.",
   },
   projects: {
     title: "Work you can inspect, not just claims.",
@@ -344,13 +384,34 @@ const en: Dict = {
   },
   contact: {
     title: "Let's build systems you can rely on.",
-    body: "Open to DevOps Engineer roles, full-time or contract. Reach me by email, LinkedIn, or GitHub.",
+    body: "Open to DevOps Engineer roles, full-time or contract. Send a message below or reach me directly.",
+    form: {
+      name: "Name",
+      namePlaceholder: "Your name",
+      email: "Email",
+      emailPlaceholder: "email@example.com",
+      message: "Message",
+      messagePlaceholder:
+        "Tell me about the role, project, or anything you'd like to discuss.",
+      submit: "Send message",
+      sending: "Sending...",
+      success: "Message sent. Thank you!",
+      error: "Message failed to send. Try again or email me directly.",
+      privacy: "Messages are sent to my email and are not stored on this site.",
+    },
+    openForm: "Send a message",
+  },
+  contactPage: {
+    title: "Send a message",
+    description:
+      "Tell me about the role, project, or opportunity you'd like to discuss. I'll reply by email.",
+    back: "Back to contact",
   },
   hero: {
     status: "Open to DevOps opportunities",
     role: "DevOps Engineer",
     tagline:
-      "I build and operate reliable release pipelines — from Docker and CI/CD to observability and supply-chain security.",
+      "Informatics graduate focused on Linux, Docker, and CI/CD. I turn projects into repeatable, maintainable releases.",
     location: "Cibubur, Indonesia",
   },
   theme: {
@@ -360,7 +421,6 @@ const en: Dict = {
     label: "Switch language",
   },
   footer: {
-    built: "Built with Next.js · Deployed on Vercel",
     rights: "All rights reserved.",
   },
 };
