@@ -11,12 +11,16 @@ export const profile = {
   } satisfies Localized<string>,
   about: {
     id: [
-      "Saya mengerjakan project dari ujung ke ujung — mulai dari model machine learning dan API, sampai cara aplikasinya dikemas, diuji, dan dirilis. Fokus saya sekarang adalah DevOps: membuat proses rilis yang bisa diulang dan aman.",
-      "Di skripsi saya membangun deteksi anomali rute kapal dengan LSTM-Autoencoder dan LOF. Di Wade Convert saya merancang pipeline GitHub Actions, image Docker, pemindaian Trivy, dan publikasi ke GHCR. Dua-duanya mengajarkan hal yang sama: sistem yang baik harus bisa dijelaskan, diuji, dan dioperasikan.",
+      "Halo, saya Rangga Dewa Yudhistira, lulusan Informatika Universitas Nasional dengan IPK 3,85 dan minat besar pada DevOps serta infrastruktur perangkat lunak. Saya memiliki pengalaman menjelajahi Linux, Git, GitHub, dan CI/CD, serta magang di BPKP Pusat.",
+      "Perjalanan saya menggabungkan riset machine learning dan praktik DevOps. Melalui skripsi, saya mengeksplorasi deteksi anomali rute kapal menggunakan machine learning. Di project Wade Convert, saya mengerjakan otomasi CI/CD, pemindaian keamanan image Docker dengan Trivy, dan publikasi image container melalui GitHub Container Registry (GHCR).",
+      "Saya terus belajar membangun, menguji, mengamankan, dan merilis aplikasi melalui alur yang bisa diulang dan andal.",
+      "Saya menghargai pembelajaran berkelanjutan, pemecahan masalah, dan kolaborasi, serta menantikan kesempatan berkembang sebagai DevOps Engineer.",
     ],
     en: [
-      "I build projects end to end — from machine learning models and APIs to how the app is packaged, tested, and released. My current focus is DevOps: making releases repeatable and safe.",
-      "For my thesis I built vessel-route anomaly detection with an LSTM-Autoencoder and LOF. In Wade Convert I designed the GitHub Actions pipeline, Docker images, Trivy scans, and GHCR publishing. Both taught me the same lesson: a good system must be explainable, testable, and operable.",
+      "Hello, I'm Rangga Dewa Yudhistira, an Informatics graduate from Universitas Nasional with a 3.85 GPA and a strong interest in DevOps and software infrastructure. I have experience exploring Linux, Git, GitHub, and CI/CD, along with an internship at BPKP Pusat.",
+      "My journey combines machine learning research and hands-on DevOps practices. Through my thesis, I explored vessel-route anomaly detection using machine learning. In my Wade Convert project, I worked on CI/CD automation, Docker image security scanning with Trivy, and container image publishing through GitHub Container Registry (GHCR).",
+      "I'm continuously learning how to build, test, secure, and deploy applications through repeatable and reliable workflows.",
+      "I value continuous learning, problem-solving, and collaboration, and I'm looking forward to growing as a DevOps Engineer.",
     ],
   } satisfies Localized<string[]>,
   focus: {
@@ -38,23 +42,19 @@ export const skillGroups: {
   items: string[];
 }[] = [
   {
-    name: { id: "Container & Infra", en: "Containers & Infra" },
-    items: ["Docker", "Docker Compose", "Linux"],
+    name: { id: "Sistem & Container", en: "Systems & Containers" },
+    items: ["Linux", "Docker", "Docker Compose"],
   },
   {
-    name: { id: "CI/CD & Keamanan", en: "CI/CD & Security" },
-    items: ["GitHub Actions", "GHCR", "Trivy", "pre-commit"],
+    name: { id: "Version Control & CI/CD", en: "Version Control & CI/CD" },
+    items: ["Git", "GitHub", "GitHub Actions"],
   },
   {
-    name: { id: "Backend & Testing", en: "Backend & Testing" },
-    items: ["Python", "FastAPI", "pytest", "REST API"],
+    name: { id: "Aplikasi", en: "Application" },
+    items: ["Python", "FastAPI", "Next.js"],
   },
   {
-    name: { id: "Frontend", en: "Frontend" },
-    items: ["TypeScript", "Next.js", "Tailwind CSS"],
-  },
-  {
-    name: { id: "Data & ML", en: "Data & ML" },
+    name: { id: "Riset (Skripsi)", en: "Research (Thesis)" },
     items: ["TensorFlow", "scikit-learn", "pandas", "Streamlit"],
   },
 ];
@@ -62,11 +62,16 @@ export const skillGroups: {
 export const journey: {
   kind: Localized<string>;
   title: Localized<string>;
+  role: Localized<string>;
   detail: Localized<string>;
 }[] = [
   {
     kind: { id: "Proyek pribadi", en: "Personal project" },
     title: { id: "Wade Convert", en: "Wade Convert" },
+    role: {
+      id: "Solo — aplikasi, Docker, CI/CD",
+      en: "Solo — application, Docker, CI/CD",
+    },
     detail: {
       id: "Next.js + FastAPI, Docker Compose, CI/CD, Trivy, GHCR.",
       en: "Next.js + FastAPI, Docker Compose, CI/CD, Trivy, GHCR.",
@@ -77,6 +82,10 @@ export const journey: {
     title: {
       id: "Deteksi Anomali Rute Kapal",
       en: "Vessel Route Anomaly Detection",
+    },
+    role: {
+      id: "Solo — riset, pipeline data, model, dashboard",
+      en: "Solo — research, data pipeline, model, dashboard",
     },
     detail: {
       id: "Hybrid LSTM-AE + LOF, adaptive threshold, dashboard Streamlit.",

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { GithubIcon } from "@/components/github-icon";
@@ -13,9 +14,10 @@ export function SiteHeader() {
   const { t } = useI18n();
 
   const links = [
+    { href: "/#about", label: t.nav.about },
+    { href: "/journey", label: t.nav.journey },
     { href: "/#projects", label: t.nav.projects },
     { href: "/#labs", label: t.nav.labs },
-    { href: "/#about", label: t.nav.about },
     { href: "/#contact", label: t.nav.contact },
   ];
 
@@ -23,11 +25,17 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/70 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
       <div className="page-shell flex h-16 items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-2.5" aria-label="Rangga Dewa Yudhistira">
-          <span className="grid size-8 place-items-center rounded-lg bg-primary font-mono text-sm font-semibold text-primary-foreground">
-            RD
-          </span>
+          <Image
+            src="/logo-dewa.svg"
+            alt=""
+            width={45}
+            height={32}
+            priority
+            unoptimized
+            className="h-8 w-auto rounded-md"
+          />
           <span className="hidden font-mono text-sm tracking-tight sm:block">
-            rangga<span className="text-primary">.</span>devops
+            ranggadyexe
           </span>
         </Link>
 

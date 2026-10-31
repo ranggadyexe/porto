@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUpRight, Mail, MapPin } from "lucide-react";
+import { ArrowUpRight, Mail, MapPin, Send } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -75,6 +75,9 @@ export function HomeSections() {
                     {item.kind[lang]}
                   </p>
                   <p className="mt-1 text-sm font-medium">{item.title[lang]}</p>
+                  <p className="mt-1 font-mono text-[10px] text-muted-foreground">
+                    {item.role[lang]}
+                  </p>
                   <p className="mt-1 text-xs leading-5 text-muted-foreground">
                     {item.detail[lang]}
                   </p>
@@ -88,7 +91,7 @@ export function HomeSections() {
       <section id="skills" className="page-shell border-t border-border/70 py-16 sm:py-20">
         <SectionHeading label={t.sections.skills} title={t.skills.title} />
 
-        <div className="mt-10 grid gap-px overflow-hidden rounded-xl border border-border/70 bg-border/70 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-10 grid gap-px overflow-hidden rounded-xl border border-border/70 bg-border/70 sm:grid-cols-2 lg:grid-cols-4">
           {skillGroups.map((group) => (
             <div key={group.name.en} className="bg-card p-5">
               <p className="font-mono text-xs text-primary">{group.name[lang]}</p>
@@ -235,6 +238,12 @@ export function HomeSections() {
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Button asChild size="lg">
+              <Link href="/contact">
+                <Send className="size-4" />
+                {t.contact.openForm}
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline">
               <a href={`mailto:${profile.email}`}>
                 <Mail className="size-4" />
                 {t.actions.emailMe}
