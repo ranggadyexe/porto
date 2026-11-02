@@ -195,6 +195,16 @@ const id = {
       "Ceritakan peran, project, atau peluang yang ingin didiskusikan. Saya akan membalas lewat email.",
     back: "Kembali ke kontak",
   },
+  cvPage: {
+    title: "CV",
+    description:
+      "Lihat CV saya langsung di browser, atau unduh salinannya.",
+    back: "Kembali ke beranda",
+    download: "Unduh CV",
+    open: "Buka PDF di tab baru",
+    hint: "Gunakan toolbar PDF untuk zoom.",
+    empty: "CV belum tersedia.",
+  },
   hero: {
     status: "Terbuka untuk peluang DevOps",
     role: "DevOps Engineer",
@@ -406,6 +416,15 @@ const en: Dict = {
     description:
       "Tell me about the role, project, or opportunity you'd like to discuss. I'll reply by email.",
     back: "Back to contact",
+  },
+  cvPage: {
+    title: "CV",
+    description: "View my CV in the browser, or download a copy.",
+    back: "Back to home",
+    download: "Download CV",
+    open: "Open PDF in a new tab",
+    hint: "Use the PDF toolbar to zoom.",
+    empty: "CV is not available yet.",
   },
   hero: {
     status: "Open to DevOps opportunities",

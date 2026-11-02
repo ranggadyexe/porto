@@ -82,10 +82,10 @@ export function Hero({
             ) : null}
             {hasCv ? (
               <Button asChild size="lg" variant="outline">
-                <a href="/cv.pdf" download>
+                <Link href="/cv">
                   <FileText className="size-4" />
                   {t.actions.viewCv}
-                </a>
+                </Link>
               </Button>
             ) : null}
             <Button asChild size="lg" variant="outline">
