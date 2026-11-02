@@ -42,3 +42,5 @@ next-env.d.ts
 
 # local agent instructions
 AGENTS.md
+session
+task.md
