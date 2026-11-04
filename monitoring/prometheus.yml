@@ -1,0 +1,12 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: portfolio
+    metrics_path: /api/metrics
+    authorization:
+      type: Bearer
+      credentials: dev-token-change-me
+    static_configs:
+      - targets:
+          - app:3000
