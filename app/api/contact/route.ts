@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { httpRequestDuration, httpRequestsTotal } from "@/lib/metrics";
 
 const RESEND_URL = "https://api.resend.com/emails";
 const TO = process.env.CONTACT_TO_EMAIL ?? "ranggadewa853@gmail.com";
@@ -6,7 +7,7 @@ const FROM =
   process.env.RESEND_FROM_EMAIL ?? "Portfolio <onboarding@resend.dev>";
 const MAX_MESSAGE = 5000;
 
-export async function POST(request: Request) {
+async function handlePost(request: Request) {
   let payload: unknown;
 
   try {
@@ -74,4 +75,19 @@ export async function POST(request: Request) {
     console.error("Contact route error", error);
     return NextResponse.json({ error: "delivery" }, { status: 502 });
   }
+}
+
+export async function POST(request: Request) {
+  const startedAt = performance.now();
+  const response = await handlePost(request);
+  const labels = {
+    method: "POST",
+    route: "/api/contact",
+    status: String(response.status),
+  };
+
+  httpRequestsTotal.inc(labels);
+  httpRequestDuration.observe(labels, (performance.now() - startedAt) / 1000);
+
+  return response;
 }
