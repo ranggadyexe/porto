@@ -4,7 +4,7 @@ export const profile = {
   name: "Rangga Dewa Yudhistira",
   email: "ranggadewa853@gmail.com",
   github: "https://github.com/ranggadyexe",
-  linkedin: "https://www.linkedin.com/in/rangga-yudhistira-3bbb16349/",
+  linkedin: "https://www.linkedin.com/in/rangga-dewa-yudhistira-3bbb16349",
   location: {
     id: "Cibubur, Indonesia",
     en: "Cibubur, Indonesia",
